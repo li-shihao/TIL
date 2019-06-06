@@ -1,3 +1,9 @@
 [submodule "Deeppose"]
 	path = Deeppose
 	url = https://github.com/Honglin-Zheng/Deeppose
+[submodule "deeppose_tf"]
+	path = deeppose_tf
+	url = https://github.com/asanakoy/deeppose_tf
+[submodule "Stacked_Hourglass_Network_Keras"]
+	path = Stacked_Hourglass_Network_Keras
+	url = https://github.com/yuanyuanli85/Stacked_Hourglass_Network_Keras
