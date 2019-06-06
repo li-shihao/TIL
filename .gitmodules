@@ -1,0 +1,3 @@
+[submodule "Deeppose"]
+	path = Deeppose
+	url = https://github.com/Honglin-Zheng/Deeppose
