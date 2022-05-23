@@ -19,7 +19,7 @@ function normalizeColor(hexCode) {
   class MiniGl {
     constructor(canvas, width, height, debug = false) {
         const _miniGl = this,
-            debug_output = 0 !== document.location.search.toLowerCase().indexOf("debug=webgl");
+            debug_output = 1 !== document.location.search.toLowerCase().indexOf("debug=webgl");
         _miniGl.canvas = canvas, _miniGl.gl = _miniGl.canvas.getContext("webgl", {
             antialias: true
         }), _miniGl.meshes = [];
