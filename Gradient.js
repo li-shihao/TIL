@@ -157,7 +157,7 @@ function normalizeColor(hexCode) {
                             index: n.attributes.index
                         })
                     }
-                    setSize(width = 1, height = 1, orientation = "xz") {
+                    setSize(width = 2, height = 2, orientation = "xz") {
                         const geometry = this;
                         geometry.width = width,
                         geometry.height = height,
@@ -250,7 +250,7 @@ function normalizeColor(hexCode) {
             })
         }
     }
-    setSize(e = 1920, t = 1080) {
+    setSize(e = 1920, t = 1920) {
         this.width = e, this.height = t, this.canvas.width = e, this.canvas.height = t, this.gl.viewport(0, 0, e, t), this.commonUniforms.resolution.value = [e, t], this.commonUniforms.aspectRatio.value = e / t, this.debug("MiniGL.setSize", {
             width: e,
             height: t
