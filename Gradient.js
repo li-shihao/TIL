@@ -250,7 +250,7 @@ function normalizeColor(hexCode) {
             })
         }
     }
-    setSize(e = 640, t = 480) {
+    setSize(e = 1920, t = 1080) {
         this.width = e, this.height = t, this.canvas.width = e, this.canvas.height = t, this.gl.viewport(0, 0, e, t), this.commonUniforms.resolution.value = [e, t], this.commonUniforms.aspectRatio.value = e / t, this.debug("MiniGL.setSize", {
             width: e,
             height: t
@@ -325,7 +325,7 @@ function normalizeColor(hexCode) {
         this.conf = {
             presetName: "",
             wireframe: false,
-            density: [.06, .16],
+            density: [.24, .64],
             zoom: 1,
             rotation: 0,
             playing: true
