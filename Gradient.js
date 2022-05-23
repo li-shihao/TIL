@@ -19,7 +19,7 @@ function normalizeColor(hexCode) {
   class MiniGl {
     constructor(canvas, width, height, debug = false) {
         const _miniGl = this,
-            debug_output = 1 !== document.location.search.toLowerCase().indexOf("debug=webgl");
+            debug_output = -1 !== document.location.search.toLowerCase().indexOf("debug=webgl");
         _miniGl.canvas = canvas, _miniGl.gl = _miniGl.canvas.getContext("webgl", {
             antialias: true
         }), _miniGl.meshes = [];
@@ -157,7 +157,7 @@ function normalizeColor(hexCode) {
                             index: n.attributes.index
                         })
                     }
-                    setSize(width = 2, height = 2, orientation = "xz") {
+                    setSize(width = 4, height = 4, orientation = "xz") {
                         const geometry = this;
                         geometry.width = width,
                         geometry.height = height,
@@ -250,7 +250,7 @@ function normalizeColor(hexCode) {
             })
         }
     }
-    setSize(e = 1920, t = 1920) {
+    setSize(e = 640, t = 480) {
         this.width = e, this.height = t, this.canvas.width = e, this.canvas.height = t, this.gl.viewport(0, 0, e, t), this.commonUniforms.resolution.value = [e, t], this.commonUniforms.aspectRatio.value = e / t, this.debug("MiniGL.setSize", {
             width: e,
             height: t
@@ -325,7 +325,7 @@ function normalizeColor(hexCode) {
         this.conf = {
             presetName: "",
             wireframe: false,
-            density: [.24, .64],
+            density: [.06, .16],
             zoom: 1,
             rotation: 0,
             playing: true
