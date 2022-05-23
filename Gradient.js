@@ -16,7 +16,7 @@ function normalizeColor(hexCode) {
 //Essential functionality of WebGl
 //t = width
 //n = height
-class MiniGl {
+class MiniGl{
   constructor(canvas, width, height, debug = false) {
       const _miniGl = this,
           debug_output = -1 !== document.location.search.toLowerCase().indexOf("debug=webgl");
